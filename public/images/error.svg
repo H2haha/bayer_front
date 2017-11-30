@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>error</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="0501支付模块" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="支付结果－失败" transform="translate(-247.000000, -152.000000)" fill="#FA564B">
+            <g id="error" transform="translate(247.000000, 152.000000)">
+                <path d="M26,0 C11.7,0 0,11.7 0,26 C0,40.3 11.7,52 26,52 C40.3,52 52,40.3 52,26 C52,11.7 40.3,0 26,0 L26,0 Z M28.6,39 L23.4,39 L23.4,33.8 L28.6,33.8 L28.6,39 L28.6,39 Z M28.6,28.6 L23.4,28.6 L23.4,13 L28.6,13 L28.6,28.6 L28.6,28.6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

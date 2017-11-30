@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment-RedteaGO.com</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="
+../css/login.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_login.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css" />
+</head>
+
+<body>
+<!--nav-->
+
+<div id="head"></div>
+<!-- head-bg end -->
+
+
+<!--navend-->
+<div class="apply-main">
+    <div class="confirm－tt" id="i_confirmorder">
+
+    </div>
+    <span id="order">
+    </span>
+    <script type="text/html" id="orderDetail">
+        {{if dataPlanOrder}}
+        <ul class="apply-line1">
+            <li>{{dataPlanOrder.name}} <span>USD {{(dataPlanOrder.dataPlanPrice/10000).toFixed(2)}}/<h class="i_day"></h></span></li>
+            <li ><h id="i_buydaycount"></h> <span class="i_day"></span><span>x{{dataPlanOrder.dayCount}}</span></li>
+        </ul>
+        <div class="travel-date">
+
+            <h id="i_startTime"></h> <span>{{dataPlanOrder.startTime}}－{{dataPlanOrder.endTime}}</span>
+
+        </div>
+        <div class="total-count">
+
+            <div class="count-number">
+                <span id="i_ordertotal"></span><span class="number">USD {{(dataPlanOrder.orderPrice/10000).toFixed(2)}}</span>
+
+            </div>
+        </div>
+        {{/if}}
+    </script>
+
+    <!-- total-count end -->
+    <div class="pay-tt" id="i_paymethod">
+
+    </div>
+    <div class="card" id="i_paycard">
+
+    </div>
+
+
+    <a class="pay-btn i_submitOrder" id="pay">
+
+    </a>
+
+    <form method="post" action="https://live.adyen.com/hpp/select.shtml" id="adyenForm" name="adyenForm" target="_parent">
+        <input type="hidden"  name="merchantReference"  />
+        <input type="hidden"  name="paymentAmount"  />
+        <input type="hidden"  name="sessionValidity"  />
+        <!-- <input type="hidden"  name="shipBeforeDate"  /> -->
+        <input type="hidden"  name="countryCode"  />
+        <input type="hidden"  name="currencyCode"  />
+        <input type="hidden"  name="merchantAccount"  />
+        <input type="hidden"  name="skinCode"  />
+        <input type="hidden"  name="blockedMethods"  />
+        <input type="hidden"  name="resURL" />
+        <input type="hidden"  name="merchantSig" />
+
+    </form>
+
+</div>
+<!--login-->
+<div id="login"></div>
+<!-- index end -->
+<div class="apply-footer">
+<div id="foot"></div>
+</div>
+<!-- apply-footer end -->
+<script src="../js/base/sea.js"></script>
+<script src="../js/util/sweetalert.min.js"></script>
+<script src="../js/base/seajs-text.js"></script>
+<script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '../js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+            'util': 'util/util.js',
+            'template': 'base/template.js',
+            'jquery.i18n': 'util/jquery.i18n.properties.min.js',
+            'detail': 'detail.js'
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    seajs.use(['head-footer','apply']);
+</script>
+</body>
+
+</html>

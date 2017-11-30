@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>@1xjiantou</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="-0.000109375 0 4.375 0 4.375 8 2.18744531 8 -0.000109375 8"></polygon>
+    </defs>
+    <g id="0425套餐详情页－mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2-Copy-56" transform="translate(-114.000000, -724.000000)">
+            <g id="jiantou" transform="translate(122.000000, 728.000000) rotate(-360.000000) translate(-122.000000, -728.000000) translate(114.000000, 724.000000)">
+                <path d="M13.5625,3.55555556 L0.4375,3.55555556 C0.196,3.55555556 0,3.77955556 0,4.05555556 C0,4.33155556 0.196,4.55555556 0.4375,4.55555556 L13.5625,4.55555556 C13.804,4.55555556 14,4.33155556 14,4.05555556 C14,3.77955556 13.804,3.55555556 13.5625,3.55555556" id="Fill-1" fill="#EA605A"></path>
+                <g id="Group-5" transform="translate(9.625000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-4"></g>
+                    <path d="M4.2468125,3.68577778 L0.7468125,0.130222222 C0.57575,-0.0435555556 0.29925,-0.0435555556 0.1281875,0.130222222 C-0.042875,0.304 -0.042875,0.584888889 0.1281875,0.758666667 L3.318875,4 L0.1281875,7.24133333 C-0.042875,7.41511111 -0.042875,7.696 0.1281875,7.86977778 C0.2135,7.95644444 0.3255,8 0.4375,8 C0.5495,8 0.6615,7.95644444 0.7468125,7.86977778 L4.2468125,4.31422222 C4.417875,4.14044444 4.417875,3.85955556 4.2468125,3.68577778" id="Fill-3" fill="#EA605A" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

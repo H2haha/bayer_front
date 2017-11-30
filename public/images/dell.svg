@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>@1xic_Cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="All--UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="未登录" transform="translate(-324.000000, -19.000000)">
+            <g id="ic_Cross" transform="translate(319.000000, 14.000000)">
+                <g id="Icon-24px">
+                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                    <path d="M12.4246212,11.0104076 L6.41421356,5 L5,6.41421356 L11.0104076,12.4246212 L5,18.4350288 L6.41421356,19.8492424 L12.4246212,13.8388348 L18.4350288,19.8492424 L19.8492424,18.4350288 L13.8388348,12.4246212 L19.8492424,6.41421356 L18.4350288,5 L12.4246212,11.0104076 Z" id="Cross" fill="#6F6F6F"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

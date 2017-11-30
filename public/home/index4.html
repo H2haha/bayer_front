@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home-RedteaGO.com</title>
+   <!--  <link rel="apple-touch-icon" href="／favicon.ico"> -->
+    <!--浏览器页面标签里面的小图标-->
+    <link rel="shortcut icon" id="favicon" type="image/x-icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="
+../css/login.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_login.css"/>
+    <link rel="stylesheet" type="text/css"  href="../css/jquery-weui.min.css"/>
+    <link rel="stylesheet" type="text/css"  href="../css/weui.min.css"/>
+ <style type="text/css">
+.hidden {
+  display: none;
+}
+  </style>
+</head>
+
+<body class="indexbg">
+        <div id="head"></div>
+        <!--国家数滚动-->
+        <div class="list-scoll " id="country2">
+        </div>
+        <script type="text/html" id="countryCount2">
+            <div class="list-bg-tt3">
+                <span id="all2"></span>{{if obj}}({{obj.length}}){{else}}(0){{/if}}
+            </div>
+        </script>
+<div class="index">
+    <div class="bannerbg">
+        <!--首页轮播图片-->
+        <div class="slides-box">
+            <ul class="slides">
+                <li  class="banner1"></li>
+                <li  class="banner2"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- bannerbg end -->
+<!-- banner end -->
+<div class="hot-tt">
+    </div>
+
+<ul class="area-bg clearfix" id="dataPlanHot">
+</ul>
+
+<script type="text/html" id="hot">
+    {{if obj}}
+    {{each obj as dataplan}}
+    <li><a id={{dataplan.id}} class ='dataPlanHot'>{{dataplan.name}}</a></li>
+    {{/each}}
+    {{/if}}
+</script>
+<div class="list-bg2" id="country">
+
+</div>
+<script type="text/html" id="countryCount">
+    <div class="list-bg-tt">
+        <span id="all"></span>{{if obj}}({{obj.length}}){{else}}(0){{/if}}
+    </div>
+
+</script>
+
+<input id="search" name="search" placeholder="Start typing here" type="text" 
+data-list=".list2" autocomplete="off">
+<ul class="list2 clearfix" id="dataplanshow">
+</ul>
+<div class="weui-loadmore" id = 'upload' style="display: none">
+    <i class="weui-loading"></i>
+    <span class="weui-loadmore__tips">loading</span>
+</div>
+<script type="text/html" id="dataplanlist">
+    {{if success}}
+    {{if obj}}
+    {{each obj as dataplan}}
+     <blockquote>
+    <li id={{dataplan.id}} class="dataplan" onclick="showDetail(this.id)">
+        <div class="cover">
+            <img src={{dataplan.pictureS}} class="cover-img">
+            <div class="country">
+                <img src={{dataplan.pictureFlag}}>
+            </div>
+        </div>
+        <div class="ex-item">
+            <a class="item-name">{{dataplan.name.split("-")[0]}}</a>
+            {{if dataplan.discountPrice}}
+            <div class="price">USD {{(dataplan.discountPrice/10000).toFixed(2)}}</div>
+            {{else}}
+            <div class="price">USD {{(dataplan.price/10000).toFixed(2)}}</div>
+            {{/if}}
+        </div>
+    </li>
+     </blockquote>
+    {{/each}}
+    {{else}}
+    <div class="ex-item">
+        {{msg}}
+    </div>
+    {{/if}}
+    {{else}}
+    <div class="ex-item">
+        {{msg}}
+    </div>
+    {{/if}}
+</script>
+        <!--login-->
+<div id="login"></div>
+<!-- index end -->
+<div id="foot"></div>
+  <div class="results"> 
+  </div>
+<script src="../js/base/jquery.js"></script>
+<script src="../js/base/jquery-2.1.4.min.js"></script>
+<script src="/js/base/sea.js"></script>
+<script src="/js/base/seajs-text.js"></script>
+<script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '/js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+            'util': 'util/util.js',
+            'template': 'base/template.js',
+            'jquery.i18n': 'util/jquery.i18n.properties.min.js',
+            'banner': 'util/banner.js',
+            'pay': 'pay.js',
+            'weui':'util/jquery-weui.js',
+            'holmes': 'util/holmes.js',
+            'microlight':'util/microlight'
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    seajs.use(['head-footer','index2']);
+    function showDetail(dataplanId) {
+        url();
+        location.href = home+"/detail.html?dataplanId=" + dataplanId;
+    }
+    var home = ".";
+    function url(){
+        if(!location.pathname.includes("home")){
+            home = "./home";
+        }
+    }
+</script>
+  <script type="text/javascript" src="../js/util/modernizr.custom.js"></script>
+  <script type="text/javascript" src="../js/util/waypoints.min.js"></script>
+  <script type="text/javascript" src="../js/util/waypoints-sticky.min.js"></script>
+  <script type="text/javascript" src="../js/util/jquery.hideseek.min.js"></script>
+  <script type="text/javascript" src="../js/util/rainbow-custom.min.js"></script>
+  <script type="text/javascript" src="../js/util/jquery.anchor.js"></script>
+  <script src="../js/util/initializers.js"></script>
+</body>
+</html>

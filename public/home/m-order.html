@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Orders-RedteaGO.com</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_order.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="
+../css/login.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_login.css"/>
+</head>
+
+<body>
+    <a class="delete2"><img src="../images/del.svg" class="del" 
+    onclick="history.back();"></a>
+    <div class="apply-mobile" id="i_myorder">
+
+    </div>
+    <div class="order-main">
+        <!-- order-tt end -->
+        <ul class="tab-tt clearfix">
+
+            <li class="active i_unactive" id="unActive"></li>
+            <li class="border-right0" id="allOr"></li>
+
+        </ul>
+        <ul class="tab-ct" style="display:block;" id="payOrder">
+        </ul>
+        <script type="text/html" id="pay" >
+
+            {{if payedOrder&&payedOrder.length>0}}
+            {{each payedOrder as order}}
+            <span class = "showOrderM">
+            <li id={{order.orderId}} onclick="showDetail(this.id)">
+                <img src={{order.pictureFlag}} class="show-flag">
+                <dl class="tab-ct2">
+                    <dd class="orders-tt">{{order.name}}</dd>
+                    <dd class="tabfz"><span class="i_startTime"></span>{{order.startTime}}－{{order.endTime}}</dd>
+                </dl>
+                <div class="state">
+                    <a class="item1">{{order.status}}</a><img src="../images/m-arrow.svg" class="arrow">
+                </div>
+            </li>
+            </span>
+            {{/each}}
+            {{else}}
+            <div class="nodatabg">
+            <img src="../images/nodata.svg" class="no-data">
+             <div class="nodta-ex i_no_order">
+             </div>
+             <!-- nodta-ex end -->
+            </div>
+            <!-- nodatabg end -->
+
+            {{/if}}
+
+        </script>
+        <!-- tab-ct end -->
+        <ul class="tab-ct" id="orderAll">
+
+        </ul>
+
+        <script type="text/html" id="ordersAll" >
+            {{if orderAll&&orderAll.length>0}}
+            {{each orderAll as order}}
+            <span class = "showOrderM">
+            <li id={{order.orderId}} onclick="showDetail(this.id)">
+                <img src={{order.pictureFlag}} class="show-flag">
+                <dl class="tab-ct2">
+                    <dd class="orders-tt">{{order.name}}</dd>
+                    <dd class="tabfz"><span class="i_startTime"></span>{{order.startTime}}－{{order.endTime}}</dd>
+                </dl>
+                <div class="state">
+                    <a class="item1">{{order.status}}</a><img src="../images/m-arrow.svg" class="arrow">
+                </div>
+            </li>
+            </span>
+            {{/each}}
+            {{else}}
+            <img src="../images/nodata.svg" class="no-data"><div class="nodatabg">
+                <img src="../images/nodata.svg" class="no-data">
+                <div class="nodta-ex i_no_order">
+                </div>
+                <!-- nodta-ex end -->
+            </div>
+            <!-- nodatabg end -->
+            {{/if}}
+        </script>
+    </div>
+    <!-- order-main end -->
+
+</body>
+<div id="login"></div>
+<script src="../js/base/sea.js"></script>
+<script src="../js/base/jquery.js"></script>
+<script src="../js/base/seajs-text.js"></script>
+<script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '../js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+            'util': 'util/util.js',
+            'template': 'base/template.js',
+            'banner': 'util/banner.js',
+            'jquery.i18n': 'util/jquery.i18n.properties.min.js',
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    seajs.use(['head-footer', 'order']);
+
+    //点击跳转订单详情
+    function showDetail(orderId){
+        location.href = "./m-orderDetail.html?orderId="+orderId;
+    }
+</script>
+</html>

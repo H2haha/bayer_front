@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="286px" height="206px" viewBox="0 0 286 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>xxxhdpi/Rectangle 16 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3,13.4654991 C3,12.3607516 3.891027,11.4651767 4.99702474,11.4651767 L228.011127,11.4651767 C229.114054,11.4651767 230.614647,10.8066418 231.362456,9.99466831 L239.095075,1.59856063 C239.843036,0.786421261 241.032098,0.803289338 241.758709,1.6452635 L248.923814,9.94796544 C249.646937,10.7858981 251.126572,11.4651767 252.233533,11.4651767 L280.999611,11.4651767 C282.104395,11.4651767 283,12.35239 283,13.4654991 L283,198.999678 C283,200.104425 282.107562,201 281.004922,201 L4.99507769,201 C3.89322671,201 3,200.112787 3,198.999678 L3,13.4654991 Z" id="path-1"></path>
+        <filter x="-2.0%" y="-1.8%" width="103.9%" height="105.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.13502038 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="All--UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-16-Copy">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

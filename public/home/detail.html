@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Package Detail-RedteaGO.com</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="
+../css/login.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_login.css" />
+    <link href="../css/dcalendar.picker.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css" />
+</head>
+
+<body>
+    <!--nav-->
+    <div id="head"></div>
+    <!-- head-bg end -->
+    <!--navend-->
+    <div class="d-main clearfix">
+        <div class="main-left">
+            <span id="dataplanPicture">
+
+            </span>
+         <!--  Package end -->
+
+
+            <script type="text/html" id="picture">
+                {{if obj}}
+                <div class="cover2" >
+                    <img src={{obj.pictureB}} class="cover-img2">
+                    <img  src={{obj.pictureFlag}}  class="cover-country">
+                </div>
+                <!-- cover end  -->
+                <div class="Package">
+                    <ul class="Package-ct">
+                        <li><a class="pack1">{{obj.name.split("-")[0]}}</a><span class="md-count">USD {{(obj.discountPrice/10000).toFixed(2)}}/<span class="i_day"></span></span></li>
+                        <li><a class="pack2">{{obj.name.split("-")[1]}}</a>
+                            {{if obj.discountPrice !=obj.price }}
+                            <span class="md-discount">USD {{(obj.price/10000).toFixed(2)}}/<span class="i_day"></span></span>
+                            {{/if}}
+                        </li>
+                    </ul>
+                </div>
+                {{/if}}
+            </script>
+            <div class="dsbg">
+                <div class="ds" id="i_dataplanDescribe">
+                    <!--套餐描述-->
+                </div>
+                <!-- ds end -->
+                <ul class="ds-detail" id="dataplanDescription">
+
+                </ul>
+                        <script type="text/html" id="description">
+                            {{if obj}}
+                            <li class="clearfix"><span id = "i_localOperator"></span> 
+                            <a class="ds-item">{{obj.localOperator}}</a></li>
+                            <li class="clearfix"><span>APN</span>
+                            <a class="ds-item">{{obj.apn}}</a></li>
+                            <li class="clearfix"><span id="i_network"></span>
+                             <a class="ds-item">{{obj.network}}</a>
+                             </li>
+                            <li class="clearfix" >
+                                <span id="i_area"></span>
+                                 <a class="ds-item">{{obj.area}}</a>
+                            </li>
+                            <li class="clearfix"><span id="i_activate"></span>
+                             <a class="ds-item">{{obj.activate}}</a>
+                             </li>
+                            <li class="ds-lastline clearfix"><span id="i_description"></span>
+                                <a class="ds-item">
+                                {{obj.description}}
+                                </a>
+                            </li>
+                            {{/if}}
+                            </script>
+            </div>
+            <!-- dsbg end -->
+            <div class="about">
+                <p class="about-tt" id="i_aboutcard">
+
+                </p>
+                <div class="method" id="i_usemethod">
+
+                </div>
+                <div class="m-photo">
+                    <img src="../images/Group3.svg">
+                </div>
+                <ul class="explain clearfix">
+                    <li class="explain1" id="i_choosecountry">
+                    </li>
+                    <li class="explain2" id="i_cidpuk">
+                    </li>
+                    <li class="explain3" id="i_arrival">
+                    </li>
+                </ul>
+                <div class="important" id="i_alert">
+
+                </div>
+            </div>
+            <!-- about end -->
+            <div class="unction clearfix">
+                <div class="unction-left" id="i_cardFunc">
+
+                </div>
+                <div class="unction-right" id="i_sim_micro">
+
+                </div>
+            </div>
+            <!--   unction end -->
+            <div class="unction clearfix unction2" >
+                <div class="unction-left" id="i_usenet">
+
+                </div>
+                <div class="unction-right" id="i_support_phone">
+
+                </div>
+            </div>
+            <!--   unction end -->
+        </div>
+        <!-- main-left end -->
+        <div class="m-apply-bg">
+            <a class="m-apply i_buynow" id="mobileBuy" id="i_buynow">
+
+    </a>
+        </div>
+        <div class="main-right">
+            <div class="mainline-first clearfix" id="dataplan">
+            </div>
+            <script type="text/html" id="dataplanDetail">
+                {{if obj}}
+                <ul class="mainline-left">
+                    <li><a class="left-item">{{obj.name.split("-")[0]}}</a></li>
+                    <li style="font-size:24px!important;color:#757575!important;">
+                    {{obj.name.split("-")[1]}}</li>
+                </ul>
+                <ul class="mainline-right">
+                    <li><span class="day-count">USD {{(obj.discountPrice/10000).toFixed(2)}}/<span class="i_day"></span></span></li>
+                    {{if obj.discountPrice !=obj.price }}
+                    <li>
+                        <span class="d-count">USD {{(obj.price/10000).toFixed(2)}}/<span class="i_day"></span></span>
+                    </li>
+                    {{/if}}
+                </ul>
+                {{/if}}
+            </script>
+            <!-- mainline-first end -->
+            <div class="date-tt" id="i_startTime_choose">
+
+            </div>
+            <div class="remind3" id="i_remind_localtime">
+
+            </div>
+            <div class="start-time">
+
+                <span  id="i_start"></span>
+            <input type="text" class="date" readonly="readonly"  id="startTime"/>
+
+            </div>
+            <!--start-time end -->
+            <div class="start-time">
+                <span  id="i_end"></span>
+
+                <input type="text" class="date" readonly="readonly"  id="endTime" />
+            </div>
+
+            <!--选完日期动效-->
+            <div class="total-pricebg" style="display:none;" id="total">
+            </div>
+            <script type="text/html" id="orderTotal">
+                {{if obj}}
+                <ul class="pricebbg">
+                    <li>USD {{(obj.discountPrice/10000).toFixed(2)}} X {{obj.dayCount}}<h class="i_day"></h> <span>USD {{(obj.discountPrice*obj.dayCount/10000).toFixed(2)}}</span></li>
+                    {{if obj.discountPrice!=obj.price}}
+                    <li>
+                        <span class="discount">
+                 USD {{(obj.price*obj.dayCount/10000).toFixed(2)}}
+              
+                </span>
+                    </li>
+                    {{/if}}
+                </ul>
+                {{/if}}
+                <!--   total-pricebg end -->
+                <div class="count-line">
+                    <h id="i_total_price"></h><span>USD {{(obj.discountPrice*obj.dayCount/10000).toFixed(2)}}</span>
+                </div>
+            </script>
+                <!--    pricebbg end -->
+            <!--start-time end -->
+            <div class="apply-bg" id="remind">
+            <div class="apply-remind i_apply_remind" style="display: none" id="error"></div>
+            </div>
+            <!-- apply-bg end -->
+           <a class="apply-btn i_buynow" id="buy"></a>
+        </div>
+        <!--     main-right end -->
+    </div>
+    <!-- d-main end -->
+    <!--login-->
+    <div id="login"></div>
+    <!-- index end -->
+
+    <div class="detail-footer">
+    <div id="foot"></div>
+    </div>
+   <!--  detail-footer end -->
+    <script src="../js/base/jquery.js"></script>
+    <script src="../js/util/sweetalert.min.js"></script>
+    <script src="../js/base/sea.js"></script>
+    <script src="../js/base/seajs-text.js"></script>
+    <script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '../js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+            'util': 'util/util.js',
+            'template': 'base/template.js',
+            'jquery.i18n': 'util/jquery.i18n.properties.min.js',
+            'banner': 'util/banner.js',
+            'dcalendarpicker': 'util/dcalendar.picker.js'
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    seajs.use(['head-footer', 'detail']);
+    </script>
+</body>
+
+</html>

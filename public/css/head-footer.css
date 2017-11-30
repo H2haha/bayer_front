@@ -1,0 +1,138 @@
+
+
+.head-bg{
+width:100%;
+height:71px;border-bottom:1px solid #fe695b; 
+background:#ffffff;
+}
+.nav{ width:1200px;margin: 0 auto;position:relative; }
+.logo{float:left;margin-top:13px;
+    display:inline-block;
+    width:176px;
+    height:40px;
+}
+.nav-right li{ float:left;
+margin-right: 60px;
+}
+.nav-right li a{ 
+font-size:18px;
+color:#757575;
+height:71px;
+line-height:71px;
+
+}
+.nav-right{position:absolute;right:-60px;top:0px;}
+.headfix{ position:fixed;z-index:99;}
+.footer{ 
+width:1200px;
+margin: 0 auto;
+
+ }
+ .footerlogo{ float:left;width:437px;height:78px;  }
+ .footer-nav{ float:right; margin-top:10px;height:68px;}
+ .footer-nav li{ float:left;
+font-size:14px;
+color:#ffffff;
+line-height:10px;
+margin-right:88px;
+  }
+.footer-nav li a{ 
+color:#ffffff;
+  }
+.copyright li{
+ font-size:7px;
+color:#ffffff;
+text-align:center;
+text-align: center;
+
+}
+.footerbg{background:#3f3e3e;width: 100%;height:120px;
+padding:30px 0px;}
+.more{ display:none; }
+.nav-right li a:hover{
+color:#FA564B; }
+.personnalbg{
+	width:294px;
+	height:215px;
+	background: url('../images/personnal.png') center top no-repeat;
+	position:absolute;
+	top: 53px;
+	right: -35px;
+	z-index:2000;
+    display:none;
+}
+
+.personnal dd{height:45px;border-bottom:1px solid #e0e0e0;
+	color:#4C4545!important;font-size:18px;
+	position:relative;
+
+}
+.personnal dd a:hover{color:#fe695b!important;}
+.personnal dd a{color:#4C4545!important;font-size:18px;line-height:45px!important;}
+.personnal{ width:245px; margin:0 auto;margin-top:48px; }
+.order{ line-height:45px; }
+.per{position:absolute;top:0px; right:0px;display:none; }
+.per{height:50px;width:100px;}
+ .pername {
+     position: absolute;
+     top: 0px;
+     right: -18px;
+     font-size: 18px;
+     color: #757575;
+     height: 71px;
+     line-height: 71px;
+     cursor: pointer;
+ }
+  .pername:hover{
+color:#fe695b;
+text-align:left; }
+.personnal li:hover{ 
+color:#fe695b;
+ }
+ .copy-btn{border:1px solid #bdbdbd;
+border-radius:3px;
+width:64px;
+height:19px;line-height:19px;
+font-size:12px!important;
+color:#757575!important;
+display:block;
+text-align: center;
+cursor: pointer;
+}
+.copy{ height:58px!important;position:relative; }
+.copy-btn{ position:absolute;right:0px;bottom:5px; }
+.sg{position:absolute;right:0px;top:0px;}
+.cidnumber {
+    display: inline-block;
+    width:150px;
+    font-size: 18px;
+    color: #212121;
+    text-align: right;
+    border:none; 
+}
+.success{width:80px;height:14px;
+line-height:14px;
+font-size:14px;
+color:#757575;
+position:absolute;
+top: -20px;
+right:0px;
+display:none;
+background: url('../images/right.svg') no-repeat;
+text-indent:20px;
+}
+.footer_logo{ display:block;width:119px;height:25px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

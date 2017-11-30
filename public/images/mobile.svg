@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="120px" height="35px" viewBox="0 0 120 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>xxhdpi/Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="0425套餐详情页－mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2-Copy-60" transform="translate(-25.000000, -318.000000)">
+            <g id="Group" transform="translate(25.000000, 318.000000)">
+                <path d="M29.6145192,11 L10.0103198,11 C9.45228901,11 9,11.4341423 9,11.969567 L9,24.030433 C9,24.5658577 9.45228901,25 10.0103198,25 L29.6145192,25 C30.17255,25 30.624839,24.5658577 30.624839,24.030433 L30.624839,11.969567 C30.624839,11.4341423 30.17255,11 29.6145192,11 Z M25.1269986,20.319378 L28.4257029,20.319378 L28.4257029,22.6052632 L25.1269986,22.6052632 L25.1269986,20.319378 Z M9.54978404,13.6375598 L30.075055,13.6375598 L30.075055,16.0992823 L9.54978404,16.0992823 L9.54978404,13.6375598 Z" id="Imported-Layers-Copy-5" fill="#F6A623"></path>
+                <rect id="Rectangle-4-Copy" stroke="#FA564B" x="0.5" y="0.5" width="118.43128" height="34" rx="1"></rect>
+                <polygon id="Rectangle-5-Copy" fill="#FA564B" points="119.307892 17.0716917 119.307892 35 102 35"></polygon>
+                <g id="check-copy" transform="translate(109.000000, 25.000000)" fill="#FFFFFF">
+                    <polygon id="Shape" points="3.11111111 6.09998118 0.777777778 3.68300751 0 4.4886654 3.11111111 7.71129697 9.77777778 0.805657892 9 8.8817842e-16"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

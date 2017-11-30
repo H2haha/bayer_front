@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Detail-RedteaGO.com</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_orderdetail.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_apply.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css"/>
+</head>
+<body>
+<a  onclick="history.back();">
+<img src="../images/b-arrows.svg" class="return"></a>
+<div class="apply-mobile i_order_detail">
+
+</div>
+<span id="orderDetail">
+</span>
+<script type="text/html" id="orderD" >
+    {{if obj}}
+    <div class="ordermain">
+        <div class="order-tt">
+            <img src={{obj.pictureFlag}}>
+            <div class="order-tt2">{{obj.name}}({{obj.dayCount}}<span class="i_day"></span>)</div>
+        </div>
+        <!--    order-tt end -->
+        <div class="orer-tt3 i_orderdetail">
+
+        </div>
+        <!--   orer-tt3 end -->
+        <ul class="order-state">
+            <li><h id="i_orderstatus"></h> <span class="not-active">{{obj.status}}</span></li>
+            <li><h id="i_ordercode"></h><span>{{obj.orderId}}</span></li>
+            <li><h id="i_buytime"></h><span>{{obj.createTime}}</span></li>
+
+            <li class="margin-bottom0"><h id="i_startTime"></h><span>{{obj.startTime}}－{{obj.endTime}}</span></li>
+        </ul>
+        <!-- order-state end -->
+        <div class="order-tt4" id="i_paydetail">
+        </div>
+        <!-- orer-tt4 end -->
+        <ul class="order-state margin-bottom0">
+            <li>{{obj.name}}<span>USD {{(obj.dataPlanPrice/10000).toFixed(2)}}/<span class="i_day"></span></span></span></li>
+            <li class="margin-bottom0"><h id="i_buydaycount"></h><span>{{obj.dayCount}}<span class="i_day"></span></span></span></li>
+        </ul>
+        <div class="order-total">
+            <div class="order-totalcount"><h  id="i_orderpayfact"></h> <span>USD {{(obj.orderPrice/10000).toFixed(2)}}</span></div>
+        </div>
+        <div class="o-btnbg">
+            <div class="o-btnbg2">
+                <!--如果是不可退款状态，退款按钮不显示-->
+                {{if obj.refundable}}
+                <a class="o-btn refund i_refund mobile" id = {{obj.orderId}}></a>
+                {{/if}}
+                <a class="o-btn o-again i_buyagain" id={{obj.dataPlanId}}></a>
+            </div>
+        </div>
+        <!-- o-btnbg end -->
+    </div>
+    {{/if}}
+</script>
+<!-- ordermain end -->
+</body>
+<div id="login"></div>
+<script src="../js/util/sweetalert.min.js"></script>
+<script src="../js/base/sea.js"></script>
+<script src="../js/base/seajs-text.js"></script>
+<script src="../js/util/util.js"></script>
+<script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '../js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+            'util': 'util/util.js',
+            'template': 'base/template.js',
+            'banner': 'util/banner.js',
+            'jquery.i18n': 'util/jquery.i18n.properties.min.js',
+            'detail': 'detail.js'
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    seajs.use('orderDetail','head-footer');
+
+</script>
+</html>

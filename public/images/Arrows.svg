@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>hdpi/Arrows</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="All--UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的订单－全部－订单状态" transform="translate(-810.000000, -252.000000)" fill="#BDBDBD">
+            <path d="M816.368822,265.788174 L810.186965,259.460915 C809.937037,259.197606 809.937718,258.784387 810.188779,258.522212 L816.412367,252.21021 C816.672046,251.938511 817.102956,251.928985 817.374429,252.188665 C817.645902,252.448345 817.655428,252.879028 817.395748,253.150727 L811.620307,258.993945 L817.355605,264.851059 C817.614378,265.123439 817.603265,265.554122 817.330658,265.812894 C817.199117,265.938085 817.030609,266 816.862327,266 C816.682252,266 816.502631,265.929013 816.368822,265.788174 Z" id="Arrows" transform="translate(813.792219, 259.000000) scale(-1, 1) translate(-813.792219, -259.000000) "></path>
+        </g>
+    </g>
+</svg>

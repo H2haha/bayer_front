@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment Results-RedteaGO.com</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:768px)" href="
+../css/login.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_login.css" />
+</head>
+<body>
+    <div id="head"></div>
+    <!-- head-bg end -->
+    <span id="success" style="display:none;">
+        <div class="result-bbg">
+            <div class="result-bg">
+                <ul class="statebg">
+                    <li class="state1" id="i_paysuccess"></li>
+                    <li class="state2" id="i_tinyalert" 
+                    style="margin-bottom:14px!important">
+
+
+
+                    </li>
+                </ul>
+                <a class="p-more i_readorder" id="orderDetail"></a>
+                <a class="re-index" id="toIndex"></a>
+            </div>
+            <!-- result-bg end -->
+        </div>
+    </span>
+    <span id="failed" style="display:none;">
+         <div class="result-bbg">
+            <div class="result-bg result-bg2">
+                <ul class="statebg">
+                    <li class="state3" id="i_payfailed"></li>
+                    <li class="state2" id="i_orderrebuy"></li>
+                </ul>
+                <a class="p-more p-more2 p-more3 i_buyagain" id="buyAgain"></a>
+            </div>
+             <!-- result-bg end -->
+        </div>
+    </span>
+        <!-- result-bbg end -->
+<div class="m-like">
+<div class="like-tt" id="i_maylike">
+
+</div>
+<ul class="list2 clearfix" id="dataplanshow">
+    </ul>
+
+    <script type="text/html" id="dataplanlist" >
+        {{if success}}
+        {{if obj}}
+        {{each obj as dataplan}}
+        <li id={{dataplan.id}} class="dataplan"  onclick="showDetail(this.id)">
+            <div class="cover">
+                <img src={{dataplan.pictureS}} class="cover-img">
+                <div class="country">
+                    <img src={{dataplan.pictureFlag}}>
+                </div>
+            </div>
+            <div class="ex-item">
+                {{dataplan.name}}
+                <div class="price">USD {{(dataplan.price/10000).toFixed(2)}}</div>
+            </div>
+        </li>
+        {{/each}}
+        {{else}}
+        <div class="ex-item">
+            {{msg}}
+        </div>
+        {{/if}}
+        {{else}}
+        <div class="ex-item">
+            {{msg}}
+        </div>
+        {{/if}}
+    </script>
+</div>
+
+    <div id="login"></div>
+    <div class="pay-footer">
+    <div id="foot"></div>
+    </div>
+    <script src="../js/base/sea.js"></script>
+    <script src="../js/base/seajs-text.js"></script>
+    <script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '../js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+            'util': 'util/util.js',
+            'template': 'base/template.js',
+            'jquery.i18n': 'util/jquery.i18n.properties.min.js',
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    seajs.use(['head-footer','pay']);
+    function showDetail(dataplanId){
+        //alert(dataplanId);
+        location.href = "./detail.html?dataplanId="+dataplanId;
+    }
+    </script>
+</body>
+
+</html>

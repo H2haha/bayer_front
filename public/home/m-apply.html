@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment-RedteaGO.com</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="
+../css/m_apply.css"/>
+    <link href="../css/dcalendar.picker.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css" />
+</head>
+<body>
+<!--nav-->
+<div class="main-right">
+    <a class="delete2">
+    <img src="../images/del.svg" class="del" onclick="history.back();">
+    </a>
+    <div class="apply-mobile" id="i_buy">
+
+    </div>
+    <div class="mainline-first clearfix" id="dataplan">
+
+    </div>
+    <script type="text/html" id="dataplanDetail">
+        {{if obj}}
+        <ul class="mainline-left">
+            <li><a class="left-item">{{obj.name.split("-")[0]}}</a></li>
+            <li style="color:#757575!important;">{{obj.name.split("-")[1]}}</li>
+        </ul>
+        <ul class="mainline-right">
+            <li><span class="day-count">USD {{(obj.discountPrice/10000).toFixed(2)}}/<span class="i_day"></span></span></li>
+            {{if obj.discountPrice !=obj.price }}
+            <li>
+                <span class="d-count">USD {{(obj.price/10000).toFixed(2)}}/<span class="i_day"></span></span>
+            </li>
+            {{/if}}
+        </ul>
+        {{/if}}
+    </script>
+    <!-- mainline-first end -->
+    <div class="date-tt" id="i_startTime_choose">
+    </div>
+    <div class="remind3" id="i_remind_localtime">
+    </div>
+    <div class="start-time">
+        <span  id="i_start"></span>
+        <input type="text" class="date time" readonly="readonly"  id="startTime"/>
+    </div>
+    <!--start-time end -->
+    <div class="start-time">
+        <span  id="i_end"></span>
+        <input type="text" class="date time" readonly="readonly"  id="endTime"/>
+    </div>
+    <!--start-time end -->
+    <span id="total">
+
+    </span>
+
+    <script type="text/html" id="orderTotal">
+        {{if obj}}
+        <div class="day-count">
+            <div class="day-total"><span id="i_totaldaycount"> </span><a>{{obj.dayCount}} </a><span class="i_day"></span></div>
+        </div>
+        <ul class="discount-bg">
+            <li>USD {{(obj.discountPrice/10000).toFixed(2)}} X {{obj.dayCount}}<h class="i_day"></h> <span>USD {{(obj.discountPrice*obj.dayCount/10000).toFixed(2)}}</span></li>
+            <li>
+                {{if obj.discountPrice!=obj.price}}
+    <span class="m-discount">
+    USD {{(obj.price*obj.dayCount/10000).toFixed(2)}}
+    </span>
+                {{/if}}
+            </li>
+        </ul>
+        <div class="m-count">
+            <h id="i_total_price"></h>               <span>USD {{(obj.discountPrice*obj.dayCount/10000).toFixed(2)}}</span>
+        </div>
+        {{/if}}
+    </script>
+
+ <!--   m-count end -->
+    <!-- day-count end -->
+<div class="m-btnbg">
+    <div class="remind4 i_apply_remind"  style="display: none" id="error">
+    </div>
+
+    <a class="apply-btn i_buynow" id="mobilePay"></a>
+</div>
+<!-- m-btnbg end -->
+
+</div>
+<!--     main-right end -->
+</div>
+<!-- d-main end -->
+
+<div class="m-cover cover" id="cover">
+
+</div>
+<span class='picker'>
+<input type="text" placeholder="" class="newdate" readonly="readonly" style="visibility: hidden;" id="time"/>
+</span>
+    <!--login-->
+<div id="login"></div>
+<script src="../js/base/sea.js"></script>
+<script src="../js/base/seajs-text.js"></script>
+<script src="../js/base/jquery.js"></script>
+<script src="../js/util/sweetalert.min.js"></script>
+<script>
+    //配置
+    seajs.config({
+        //seajs基础路径
+        base: '../js/',
+        // 别名设置
+        alias: {
+            'jquery': 'base/jquery.js',
+            'util': 'util/util.js',
+            'template': 'base/template.js',
+            'jquery.i18n': 'util/jquery.i18n.properties.min.js',
+            'banner': 'util/banner.js',
+            'dcalendarpicker': 'util/dcalendar.picker.js'
+        },
+        // 文件编码
+        charset: 'utf-8'
+    });
+    //seajs.use(['detail','m-head']);
+    seajs.use(['detail','head-footer']);
+    //seajs.use(['m-apply']);
+</script>
+</body>
+
+</html>

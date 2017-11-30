@@ -1,0 +1,11 @@
+[10:41:27] Using gulpfile ~/workspace/bayer_front/gulpfile.js
+[10:41:27] Starting 'default'...
+gulp.run() has been deprecated. Use task dependencies or gulp.watch task triggering instead.
+[10:41:27] Starting 'connect'...
+[HPM] Proxy created: /APIv1  ->  http://localhost:8085
+[10:41:27] Finished 'connect' after 15 ms
+[10:41:27] Starting 'watch'...
+[10:41:27] Finished 'watch' after 21 ms
+[10:41:27] Finished 'default' after 39 ms
+[10:41:27] Server started http://localhost:8585
+[10:41:27] LiveReload started on port 35729
